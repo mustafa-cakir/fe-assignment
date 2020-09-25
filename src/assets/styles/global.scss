@@ -1,0 +1,196 @@
+@import './mixins';
+
+/*
+	Global styles and global imports will be on this file
+ */
+
+html {
+    font-family: Rubik, sans-serif;
+    font-size: 15px;
+    line-height: 1.42857143;
+    -ms-overflow-style: scrollbar;
+    -webkit-tap-highlight-color: transparent;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    background-color: #1c1c1e;
+    color: #f2f2f2;
+    font-family: Rubik, sans-serif;
+    font-size: 15px;
+    -webkit-font-smoothing: antialiased;
+    font-weight: normal;
+    line-height: 1.42857143;
+    margin: 0;
+    min-height: 100vh;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+input,
+button,
+textarea,
+select {
+    -webkit-appearance: none;
+    color: #000;
+    font-family: sofia-pro, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    margin: 0;
+}
+
+textarea {
+    resize: none;
+}
+
+small {
+    font-size: 12px;
+}
+
+textarea,
+input[type='text'],
+input[type='checkbox'],
+input[type='date'],
+input[type='number'],
+input[type='password'],
+input[type='email'],
+input[type='tel'] {
+    border-radius: 6px;
+    background-color: #111113;
+    border: none;
+    padding: 11px 18px;
+    transition: background-color 0.2s, box-shadow 0.2s linear;
+    width: 100%;
+    font-size: 15px;
+
+    &:hover {
+        background-color: #222;
+    }
+    &::placeholder {
+        opacity: 0.5;
+        color: rgba(235, 235, 245, 0.6);
+    }
+    &:focus {
+        box-shadow: 0 0 0 3px #555;
+        outline: none;
+    }
+}
+
+select {
+    background-color: #fff;
+    border: solid 1px #ddd;
+    border-radius: 10px;
+    font-size: 14px;
+    padding: 4px 25px 6px 10px;
+    transition: border-color 0.2s, box-shadow 0.2s linear;
+    width: 100%;
+    &:hover {
+        border-color: #aaa;
+    }
+    &:focus {
+        box-shadow: 0 0 0 3px #eee;
+        outline: none;
+    }
+}
+
+button {
+    background: none;
+    border: 0;
+    cursor: pointer;
+    font-size: inherit;
+    line-height: 1.42857143;
+    padding: 0;
+    &:focus {
+        outline: 0;
+    }
+    .pointer-event-none {
+        pointer-events: none;
+    }
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container,
+.relative {
+    position: relative;
+}
+
+:focus {
+    outline: 0;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    main {
+        flex-grow: 1;
+        z-index: 2;
+    }
+}
+
+.col {
+    min-width: auto; // a fix for new Bootstrap versions (+4.5.x)
+}
+
+hr {
+    border: 0;
+    border-bottom: 1px solid #ddd;
+    margin: 15px 0;
+}
+
+/* data-test="data-test13" */
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+        .text#{$infix}-left {
+            text-align: left !important;
+        }
+        .text#{$infix}-right {
+            text-align: right !important;
+        }
+        .text#{$infix}-center {
+            text-align: center !important;
+        }
+    }
+}
+
+/*
+	Global UI imports
+ */
+@import './button';
