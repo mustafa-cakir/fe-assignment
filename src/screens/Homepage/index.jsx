@@ -1,10 +1,11 @@
 import React from 'react';
 import './Style.scss';
+import HomeSlider from '../../components/Homepage/HomeSlider';
 
 const Homepage = () => {
     return (
         <div className="page-homepage">
-            homepage screen <div>goes here</div>
+            <HomeSlider />
         </div>
     );
 };

@@ -33,6 +33,13 @@ $spacers: map-merge(
     $spacers
 );
 
+$container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1073px,
+) !default;
+
 @import '../../../node_modules/bootstrap/scss/functions';
 @import '../../../node_modules/bootstrap/scss/variables';
 

@@ -1,0 +1,112 @@
+.header {
+    background-color: #0b0b0c;
+    &-top {
+        padding: 19px 0 17px;
+        backdrop-filter: blur(10px);
+        background-color: #151517;
+        margin-bottom: 1px;
+        &-right {
+            padding-left: 128px;
+            display: flex;
+            align-items: center;
+        }
+        .search {
+            max-width: 614px;
+            flex: 1 1 614px;
+            position: relative;
+            input {
+                padding-right: 50px;
+                color: #fff;
+            }
+            button {
+                position: absolute;
+                right: 16px;
+                top: 11px;
+                img {
+                    height: 22px;
+                    width: 22px;
+                }
+            }
+        }
+        .toolbar {
+            flex: 1;
+            text-align: right;
+            button {
+                display: inline-flex;
+                height: 22px;
+                width: 22px;
+                margin: 0 15px;
+                img {
+                    max-width: 100%;
+                    max-height: 100%;
+                }
+            }
+        }
+    }
+    &-tabs {
+        background-color: #121214;
+        //background-color: blue;
+        padding: 0;
+        &-inner {
+            padding-left: 128px;
+        }
+        ul {
+            display: flex;
+            li {
+                flex: 1;
+                &:first-child {
+                    flex: 1 1 139px;
+                    max-width: 139px;
+                }
+                &:last-child {
+                    a {
+                        border-right: none;
+                    }
+                }
+            }
+            a {
+                width: 100%;
+                color: #fff;
+                border-right: 1px solid #000;
+                position: relative;
+                display: flex;
+                height: 48px;
+                align-items: center;
+                justify-content: center;
+                transition: background-color 0.2s linear;
+                &:hover {
+                    background-color: #222;
+                }
+                &.active {
+                    background-color: transparent;
+                    background-image: linear-gradient(to bottom, #39393f, rgba(34, 34, 37, 0)),
+                        linear-gradient(to bottom, #222225, #222225);
+                    &:after {
+                        content: '';
+                        width: 100%;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 2px;
+                        box-shadow: 0 -1px 6px 0 rgba(0, 0, 0, 0.5);
+                        background-color: #0091ff;
+                    }
+                }
+            }
+        }
+    }
+    .logo {
+        position: absolute;
+        left: 15px;
+        top: 0;
+        display: flex;
+        padding: 0 15px;
+        text-align: center;
+        height: 90px;
+        border-radius: 10px;
+        background-color: #fff;
+        color: #000;
+        align-items: center;
+        justify-content: center;
+    }
+}
