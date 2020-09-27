@@ -8,8 +8,12 @@
 	color: #0a84ff;
 	padding: 7px 13px;
 	transition: background-color .2s linear;
+	display: inline-flex;
 	&:hover {
 		background-color: #0a84ff;
 		color: #fff;
+	}
+	&.large {
+		padding: 7px 37px;
 	}
 }

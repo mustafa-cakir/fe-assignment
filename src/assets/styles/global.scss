@@ -15,7 +15,7 @@ html {
 }
 
 body {
-    background-color: #212124;
+    background-color: #1c1c1e;
     color: #f2f2f2;
     font-family: Rubik, sans-serif;
     font-size: 15px;
@@ -193,3 +193,4 @@ hr {
 	Global UI imports
  */
 @import './button';
+@import './animations';
