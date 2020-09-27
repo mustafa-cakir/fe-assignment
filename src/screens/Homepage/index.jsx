@@ -5,6 +5,7 @@ import TitleBreaker from '../../components/Homepage/TitleBreaker';
 import LatestPosts from '../../components/Homepage/LatestPosts';
 import Channels from '../../components/Homepage/Channels';
 import WhoToFollow from '../../components/Homepage/WhoToFollow';
+import PopularGames from '../../components/Homepage/PopularGames';
 
 const Homepage = () => {
     return (
@@ -38,6 +39,7 @@ const Homepage = () => {
                     ctaText="Discover All"
                     subtitle="Pre-order an upcoming game to start playing on Day 1."
                 />
+                <PopularGames />
             </div>
         </div>
     );
