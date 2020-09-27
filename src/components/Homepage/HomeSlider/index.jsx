@@ -79,7 +79,9 @@ const HomeSlider = () => {
                         <div className="slide-inner">
                             <img src={slide.image} alt={slide.id} className="slide-image" />
                             <div className="slide-title">{slide.title}</div>
+                            <div className="shadow-iner" />
                         </div>
+                        <div className="shadow-bottom" />
                     </SwiperSlide>
                 ))}
                 <div className="nav-btn-container">

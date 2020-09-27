@@ -3,8 +3,8 @@
     .swiper-container {
         width: 100%;
         padding-top: 42px;
-        padding-bottom: 0;
-        margin-bottom: 50px;
+        padding-bottom: 42px;
+        margin-bottom: 27px;
     }
 
     .swiper-slide {
@@ -12,19 +12,7 @@
         background-size: cover;
         width: 770px;
         height: 391px;
-        border-radius: 20px;
-        overflow: hidden;
         transition: opacity 0.2s linear;
-        &:after {
-            content: '';
-            display: block;
-            width: 100%;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            height: 182px;
-            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.81) 100%);
-        }
     }
 
     .slide {
@@ -46,6 +34,22 @@
     .slide-inner {
         opacity: 0.2;
         transition: opacity 0.2s linear;
+        overflow: hidden;
+        border-radius: 20px;
+        position: relative;
+        img {
+            display: block;
+        }
+        .shadow-iner {
+            content: '';
+            display: block;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 182px;
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.81) 100%);
+        }
     }
 
     .swiper-slide-active {
@@ -55,6 +59,25 @@
         .slide-title {
             animation: displayTitle 0.2s linear forwards;
             animation-delay: 0.3s;
+        }
+        .shadow-bottom {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: -25px;
+            left: 0;
+            right: 0;
+            height: 8px;
+            border-radius: 17.5px;
+            -webkit-filter: blur(4px);
+            filter: blur(4px);
+            background-image: linear-gradient(
+                to right,
+                rgba(28, 28, 30, 0),
+                rgba(0, 0, 0, 0.5) 37%,
+                rgba(0, 0, 0, 0.25) 72%,
+                rgba(28, 28, 30, 0)
+            );
         }
     }
 
@@ -88,7 +111,7 @@
     }
     .swiper-container-horizontal {
         & > .swiper-pagination-bullets {
-            bottom: 20px;
+            bottom: 60px;
             .swiper-pagination-bullet {
                 opacity: 0.3;
                 transition: opacity 0.2s linear;
