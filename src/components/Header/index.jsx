@@ -6,6 +6,10 @@ import iconBag from '../../assets/images/icons/bag.png';
 import iconWallet from '../../assets/images/icons/wallet.png';
 import iconNotification from '../../assets/images/icons/notification.png';
 import iconHeart from '../../assets/images/icons/heart.png';
+import iconTabHome from '../../assets/images/icons/tab-home.png';
+import iconTabMarket from '../../assets/images/icons/tab-market.png';
+import iconTabSocial from '../../assets/images/icons/tab-social.png';
+import iconTabTournament from '../../assets/images/icons/tab-tournament.png';
 
 const Header = () => {
     const [activeTab, setActiveTab] = useState(1);
@@ -37,7 +41,7 @@ const Header = () => {
                             <button type="button">
                                 <img src={iconProfile} alt="My Account" />
                             </button>
-                            <button type="button" className="mr-6">
+                            <button type="button" className="margin-space">
                                 <img src={iconWallet} alt="Wallet" />
                             </button>
                             <button type="button">
@@ -63,6 +67,7 @@ const Header = () => {
                                     onClick={event => tabClickHandler(event, 1)}
                                     className={activeTab === 1 ? 'active' : ''}
                                 >
+                                    <img src={iconTabHome} alt="" />
                                     Home
                                 </a>
                             </li>
@@ -72,6 +77,7 @@ const Header = () => {
                                     onClick={event => tabClickHandler(event, 2)}
                                     className={activeTab === 2 ? 'active' : ''}
                                 >
+                                    <img src={iconTabSocial} alt="" />
                                     Social
                                 </a>
                             </li>
@@ -81,6 +87,7 @@ const Header = () => {
                                     onClick={event => tabClickHandler(event, 3)}
                                     className={activeTab === 3 ? 'active' : ''}
                                 >
+                                    <img src={iconTabMarket} alt="" />
                                     Market
                                 </a>
                             </li>
@@ -90,7 +97,8 @@ const Header = () => {
                                     onClick={event => tabClickHandler(event, 4)}
                                     className={activeTab === 4 ? 'active' : ''}
                                 >
-                                    tournament
+                                    <img src={iconTabTournament} alt="" />
+                                    Tournament
                                 </a>
                             </li>
                         </ul>

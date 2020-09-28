@@ -16,4 +16,28 @@
 	&.large {
 		padding: 7px 37px;
 	}
+	&.filled {
+		background-color: #0a84ff;
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 1;
+		letter-spacing: -0.4px;
+		color: #ffffff;
+		&:hover {
+			background-color: #0a7bf5;
+		}
+	}
+	&.x-large {
+		font-size: 14px;
+		font-weight: normal;
+		line-height: 1.57;
+		letter-spacing: -0.22px;
+		padding: 7px 71px;
+	}
+	&.huge {
+		font-size: 16px;
+		line-height: 1;
+		letter-spacing: -0.4px;
+		padding: 13px 45px;
+	}
 }

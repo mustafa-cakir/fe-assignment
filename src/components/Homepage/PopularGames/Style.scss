@@ -1,3 +1,70 @@
+@import '../../../assets/styles/mixins';
+
 .popular-games {
-    //
+    margin-top: 29px;
+    padding-bottom: 60px;
+    .box {
+        &-row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: -10px;
+            margin-left: -10px;
+        }
+        &-col {
+            position: relative;
+            width: 100%;
+            padding-right: 10px;
+            padding-left: 10px;
+            flex: 1 1 50%;
+            max-width: 50%;
+            margin-bottom: 15px;
+            @include media-breakpoint-up(md) {
+                margin-bottom: 0;
+                flex: 1;
+                max-width: 100%;
+            }
+        }
+        &-inner {
+            img {
+                border-radius: 10px;
+                margin-bottom: 12px;
+                display: block;
+            }
+            .name {
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 1.29;
+                letter-spacing: -0.22px;
+                color: #fff;
+                margin-bottom: 11px;
+            }
+            .price {
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 1.2;
+                color: rgba(235, 235, 245, 0.6);
+                margin-bottom: 1px;
+            }
+            .crossed {
+                text-decoration: line-through;
+                font-size: 13px;
+                line-height: 1.48;
+                color: rgba(235, 235, 245, 0.4);
+            }
+            .discount {
+                font-size: 13px;
+                font-weight: bold;
+                line-height: 1.48;
+                letter-spacing: -0.9px;
+                color: #a335ef;
+            }
+            .btn-preorder {
+                margin-top: 10px;
+            }
+        }
+    }
+    .load-more {
+        margin-top: 31px;
+        text-align: center;
+    }
 }

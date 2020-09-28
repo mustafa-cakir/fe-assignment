@@ -102,8 +102,21 @@
         color: #c5d2e3;
         align-items: center;
         justify-content: center;
-        width: 69px;
-        height: 30px;
+
+        font-size: 14px;
+        font-weight: normal;
+        font-stretch: normal;
+        line-height: 1.57;
+        letter-spacing: -0.22px;
+        text-align: center;
+        padding: 4px 17px;
+        transition: background-color 0.2s linear;
+        &:hover {
+            background-color: rgba(#c5d2e3, 0.1);
+        }
+        &:active {
+            background-color: rgba(#c5d2e3, 0.2);
+        }
         &.btn-next {
             left: auto;
             right: 0;

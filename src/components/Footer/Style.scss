@@ -1,3 +1,69 @@
 .footer {
-    //
+    backdrop-filter: blur(10px);
+    background-color: #151517;
+    .text {
+        &-small {
+            font-size: 13px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            letter-spacing: -0.21px;
+            color: #a6a6a6;
+        }
+        &-gray {
+            color: rgba(#a6a6a6, 0.5);
+        }
+    }
+    .icon {
+        &-play-store,
+        &-app-store {
+            display: block;
+            margin-bottom: 8px;
+        }
+        &-play-store {
+            width: 20px;
+            height: 24px;
+        }
+        &-app-store {
+            width: 23px;
+            height: 28px;
+        }
+    }
+    .top {
+        padding: 33px 0;
+        .title {
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 1.33;
+            letter-spacing: -0.24px;
+            color: #a6a6a6;
+            margin-bottom: 5px;
+        }
+        ul {
+            li {
+                display: block;
+                margin-bottom: 10px;
+            }
+            a {
+                @extend .text-small;
+                @extend .text-gray;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    .bottom {
+        @extend .text-small;
+        @extend .text-gray;
+        background-color: #121214;
+        padding: 26px 0 38px;
+        font-size: 11px;
+        line-height: 1.45;
+        letter-spacing: -0.18px;
+        img {
+            height: 31px;
+            width: auto;
+        }
+    }
 }

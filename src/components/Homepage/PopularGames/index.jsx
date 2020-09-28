@@ -4,6 +4,8 @@ import imageGame2 from '../../../assets/images/games/game2.jpg';
 import imageGame3 from '../../../assets/images/games/game3.jpg';
 import imageGame4 from '../../../assets/images/games/game4.jpg';
 import imageGame5 from '../../../assets/images/games/game5.jpg';
+import './Style.scss';
+import Shimmer from '../../common/Shimmer';
 
 const PopularGames = () => {
     const [gamesData, setGamesData] = useState(null);
@@ -47,7 +49,7 @@ const PopularGames = () => {
                     image: imageGame5,
                 },
             ]);
-        }, 300);
+        }, 4000);
     }, []);
 
     const calcPercentageDiscountHandler = (oldPrice, newPrice) => {
@@ -56,28 +58,52 @@ const PopularGames = () => {
 
     return (
         <div className="popular-games">
-            <div className="row">
+            <div className="box-row">
                 {gamesData ? (
                     gamesData.map(game => (
-                        <div key={game.id} className="col">
+                        <div key={game.id} className="box-col">
                             <div className="box-inner">
                                 <img src={game.image} alt={game.name} />
                                 <div className="name">{game.name}</div>
                                 <div className="price">€{game.price}</div>
                                 {game.oldPrice && game.oldPrice > game.price && (
                                     <div className="d-flex">
-                                        <div className="crossed mr-2">{game.oldPrice}</div>
+                                        <div className="crossed mr-2">€{game.oldPrice}</div>
                                         <div className="discount">
                                             {calcPercentageDiscountHandler(game.oldPrice, game.price)}%OFF
                                         </div>
                                     </div>
                                 )}
+                                <a href="#preorder" className="btn filled btn-preorder">
+                                    Pre Order
+                                </a>
                             </div>
                         </div>
                     ))
                 ) : (
-                    <div>loading</div>
+                    <>
+                        {Array.from(Array(5).keys()).map(col => (
+                            <div key={col} className="box-col">
+                                <Shimmer>
+                                    <div className="shimmer-line mb-3" style={{ width: '100%', height: 257 }} />
+
+                                    <div className="shimmer-line" style={{ width: '75%', height: 10 }} />
+                                    <div className="shimmer-line mb-2" style={{ width: '50%', height: 10 }} />
+
+                                    <div className="shimmer-line" style={{ width: '10%', height: 10 }} />
+                                    <div className="shimmer-line mb-2" style={{ width: '20%', height: 10 }} />
+
+                                    <div className="shimmer-line" style={{ width: '50%', height: 30 }} />
+                                </Shimmer>
+                            </div>
+                        ))}
+                    </>
                 )}
+            </div>
+            <div className="load-more">
+                <button type="button" className="btn x-large">
+                    LOAD MORE
+                </button>
             </div>
         </div>
     );

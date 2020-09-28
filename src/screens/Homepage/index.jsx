@@ -6,6 +6,7 @@ import LatestPosts from '../../components/Homepage/LatestPosts';
 import Channels from '../../components/Homepage/Channels';
 import WhoToFollow from '../../components/Homepage/WhoToFollow';
 import PopularGames from '../../components/Homepage/PopularGames';
+import Newsletter from '../../components/Newsletter';
 
 const Homepage = () => {
     return (
@@ -41,6 +42,7 @@ const Homepage = () => {
                 />
                 <PopularGames />
             </div>
+            <Newsletter />
         </div>
     );
 };
