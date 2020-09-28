@@ -10,10 +10,10 @@ import routes from './Routes';
 const Root = () => {
     return (
         <div className="App">
-            <BrowserRouter>
+            <BrowserRouter basename="fe-assignment">
                 <Header />
                 <main className="main">
-                    <Suspense fallback={<Loading size="medium" />}>
+                    <Suspense fallback={<Loading size="initial" />}>
                         <Switch>
                             {routes.map(({ path, Component }) => {
                                 return (

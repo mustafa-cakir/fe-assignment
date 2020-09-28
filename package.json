@@ -15,6 +15,7 @@
         "react-scripts": "3.4.3",
         "swiper": "^6.3.1"
     },
+    "homepage": "/fe-assignment/",
     "devDependencies": {
         "eslint-config-airbnb": "^18.1.0",
         "eslint-config-prettier": "^6.11.0",
