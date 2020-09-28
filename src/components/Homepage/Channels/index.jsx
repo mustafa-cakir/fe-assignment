@@ -74,7 +74,6 @@ const Channels = () => {
                     followers: '200K Users',
                     isUp: false,
                 },
-                ,
                 {
                     id: 9,
                     name: '#Diablo III',

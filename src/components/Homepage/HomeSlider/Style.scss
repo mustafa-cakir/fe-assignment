@@ -1,24 +1,34 @@
+@import '../../../assets/styles/mixins';
+
 .home-slider {
     position: relative;
     .swiper-container {
         width: 100%;
-        padding-top: 42px;
+        padding-top: 22px;
         padding-bottom: 42px;
-        margin-bottom: 27px;
+        margin-bottom: 15px;
+        @include media-breakpoint-up(md) {
+            margin-bottom: 27px;
+            padding-top: 42px;
+        }
     }
 
     .swiper-slide {
         background-position: center;
         background-size: cover;
-        width: 770px;
-        height: 391px;
+        //width: 100%;
+        //height: auto;
         transition: opacity 0.2s linear;
+        @include media-breakpoint-up(md) {
+            width: 770px;
+            height: 391px;
+        }
     }
 
     .slide {
         &-title {
             position: absolute;
-            bottom: 50px;
+            bottom: 15px;
             left: 0;
             right: 0;
             text-align: center;
@@ -27,7 +37,11 @@
             padding: 0 30px;
             opacity: 0;
             transform: translateY(15px);
-            font-size: 20px;
+            font-size: 15px;
+            @include media-breakpoint-up(md) {
+                bottom: 50px;
+                font-size: 20px;
+            }
         }
     }
 
@@ -91,6 +105,10 @@
             .container {
                 height: 100%;
             }
+            display: none;
+            @include media-breakpoint-up(md) {
+                display: block;
+            }
         }
         position: absolute;
         top: 50%;
@@ -124,7 +142,10 @@
     }
     .swiper-container-horizontal {
         & > .swiper-pagination-bullets {
-            bottom: 60px;
+            bottom: 5px;
+            @include media-breakpoint-up(md) {
+                bottom: 60px;
+            }
             .swiper-pagination-bullet {
                 opacity: 0.3;
                 transition: opacity 0.2s linear;

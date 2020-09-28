@@ -12,63 +12,63 @@ const Footer = () => {
                     <div className="row">
                         <div className="col col-12 col-lg-6">
                             <div className="row">
-                                <div className="col col-12 col-lg-4">
+                                <div className="col col-6 col-md-4">
                                     <div className="title">LA3EB</div>
                                     <ul>
                                         <li>
-                                            <a href="#">About Us</a>
+                                            <a href="#lorem">About Us</a>
                                         </li>
                                         <li>
-                                            <a href="#">Careers</a>
+                                            <a href="#lorem">Careers</a>
                                         </li>
                                         <li>
-                                            <a href="#">Newsroom</a>
+                                            <a href="#lorem">Newsroom</a>
                                         </li>
                                         <li>
-                                            <a href="#">Contact</a>
+                                            <a href="#lorem">Contact</a>
                                         </li>
                                     </ul>
                                 </div>
-                                <div className="col col-12 col-lg-4">
+                                <div className="col col-6 col-md-4">
                                     <div className="title">HELP</div>
                                     <ul>
                                         <li>
-                                            <a href="#">Support Hub</a>
+                                            <a href="#lorem">Support Hub</a>
                                         </li>
                                         <li>
-                                            <a href="#">How to activate Games</a>
+                                            <a href="#lorem">How to activate Games</a>
                                         </li>
                                         <li>
-                                            <a href="#">Terms & Conditions</a>
+                                            <a href="#lorem">Terms & Conditions</a>
                                         </li>
                                         <li>
-                                            <a href="#">Privacy & Cookies</a>
+                                            <a href="#lorem">Privacy & Cookies</a>
                                         </li>
                                         <li>
-                                            <a href="#">Returns & Refunds</a>
+                                            <a href="#lorem">Returns & Refunds</a>
                                         </li>
                                     </ul>
                                 </div>
-                                <div className="col col-12 col-lg-4">
+                                <div className="col col-12 col-md-4">
                                     <div className="title">BUSINESS</div>
                                     <ul>
                                         <li>
-                                            <a href="#">Business Center</a>
+                                            <a href="#lorem">Business Center</a>
                                         </li>
                                         <li>
-                                            <a href="#">Selling on La3eb</a>
+                                            <a href="#lorem">Selling on La3eb</a>
                                         </li>
                                         <li>
-                                            <a href="#">Developer & Publisher</a>
+                                            <a href="#lorem">Developer & Publisher</a>
                                         </li>
                                         <li>
-                                            <a href="#">Marketing Partnership</a>
+                                            <a href="#lorem">Marketing Partnership</a>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
-                        <div className="col col-12 col-lg-6">
+                        <div className="col col-12 col-lg-6 mt-6 mt-lg-0">
                             <div className="row">
                                 <div className="col offset-lg-2">
                                     <div className="title">Install the app</div>
@@ -76,14 +76,14 @@ const Footer = () => {
                                         Get great deals on games wherever you go!
                                     </div>
                                 </div>
-                                <div className="col col-12 col-lg-3">
+                                <div className="col col-12 col-md-3 mt-3 mt-md-0">
                                     <img src={iconPlayStore} className="icon-play-store" alt="" />
                                     <div className="text-small">
                                         <div>Get it on</div>
                                         <div>Google Play©</div>
                                     </div>
                                 </div>
-                                <div className="col col-12 col-lg-3">
+                                <div className="col col-12 col-md-3 mt-3 mt-md-0">
                                     <img src={iconAppStore} className="icon-app-store" alt="" />
                                     <div className="text-small">
                                         <div>Download on the</div>

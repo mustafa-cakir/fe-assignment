@@ -25,11 +25,11 @@ const Homepage = () => {
                             <div className="white-title">Latest posts</div>
                             <LatestPosts />
                         </div>
-                        <div className="col col-12 col-lg-3">
+                        <div className="col col-12 col-md-6 col-lg-3 mt-3 mt-lg-0">
                             <div className="white-title">Channels</div>
                             <Channels />
                         </div>
-                        <div className="col col-12 col-lg-3">
+                        <div className="col col-12 col-md-6 col-lg-3 mt-3 mt-lg-0">
                             <div className="white-title">Who to follow?</div>
                             <WhoToFollow />
                         </div>

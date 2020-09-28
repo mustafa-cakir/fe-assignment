@@ -10,14 +10,6 @@ import imageFollow7 from '../../../assets/images/whotofollow/follow7.png';
 import imageFollow8 from '../../../assets/images/whotofollow/follow8.png';
 import imageFollow9 from '../../../assets/images/whotofollow/follow9.png';
 import imageSubscribe from '../../../assets/images/whotofollow/subscribe.png';
-import imageChannels2 from '../../../assets/images/channels/channels2.png';
-import imageChannels1 from '../../../assets/images/channels/channels1.png';
-import imageChannels3 from '../../../assets/images/channels/channels3.png';
-import imageChannels6 from '../../../assets/images/channels/channels6.png';
-import imageChannels4 from '../../../assets/images/channels/channels4.png';
-import imageChannels7 from '../../../assets/images/channels/channels7.png';
-import imageChannels5 from '../../../assets/images/channels/channels5.png';
-import imageChannels8 from '../../../assets/images/channels/channels8.png';
 import Shimmer from '../../common/Shimmer';
 
 const WhoToFollow = () => {
@@ -75,7 +67,6 @@ const WhoToFollow = () => {
                     image: imageFollow8,
                     followers: '312.245 Followers',
                 },
-                ,
                 {
                     id: 9,
                     name: 'Loremiosum',

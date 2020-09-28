@@ -1,3 +1,5 @@
+@import '../../assets/styles/mixins';
+
 .header {
     background-color: #0b0b0c;
     &-top {
@@ -37,6 +39,7 @@
                 height: 22px;
                 width: 22px;
                 margin: 0 15px;
+                position: relative;
                 img {
                     max-width: 100%;
                     max-height: 100%;
@@ -47,6 +50,16 @@
                 &.margin-space {
                     margin-right: 45px;
                 }
+                .dot {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 8px;
+                    height: 8px;
+                    background-color: #0091ff;
+                    border-radius: 4px;
+                    box-shadow: 0 0 0 2px #151517;
+                }
             }
         }
     }
@@ -56,14 +69,17 @@
         padding: 0;
         &-inner {
             padding-left: 128px;
+            overflow: auto;
         }
         ul {
             display: flex;
             li {
                 flex: 1;
                 &:first-child {
-                    flex: 1 1 139px;
-                    max-width: 139px;
+                    @include media-breakpoint-up(lg) {
+                        flex: 1 1 139px;
+                        max-width: 139px;
+                    }
                 }
                 &:last-child {
                     a {
@@ -94,7 +110,9 @@
                     height: 12px;
                     width: auto;
                     transition: height 0.1s linear, width 0.1s linear;
-                    margin-right: 10px;
+                    @include media-breakpoint-up(lg) {
+                        margin-right: 10px;
+                    }
                 }
                 &.active {
                     color: #0091ff;

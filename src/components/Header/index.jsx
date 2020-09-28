@@ -26,9 +26,10 @@ const Header = () => {
     return (
         <header className="header">
             <div className="header-top">
-                <div className="container">
+                <div className="container-fluid container-lg position-relative">
                     <div className="logo">Logo Here</div>
-                    <div className="header-top-right">
+                    <div className="header-top-right mobile d-md-none justify-content-end">Ham Menu [X]</div>
+                    <div className="header-top-right d-none d-md-flex">
                         <div className="search">
                             <form onSubmit={searchOnSubmitHandler}>
                                 <input type="text" placeholder="Search games, gears, accessories.." />
@@ -45,6 +46,7 @@ const Header = () => {
                                 <img src={iconWallet} alt="Wallet" />
                             </button>
                             <button type="button">
+                                <div className="dot" />
                                 <img src={iconNotification} alt="Notifications" />
                             </button>
                             <button type="button">
@@ -58,7 +60,7 @@ const Header = () => {
                 </div>
             </div>
             <div className="header-tabs">
-                <div className="container">
+                <div className="container-fluid container-lg position-relative">
                     <div className="header-tabs-inner">
                         <ul>
                             <li>
@@ -68,7 +70,7 @@ const Header = () => {
                                     className={activeTab === 1 ? 'active' : ''}
                                 >
                                     <img src={iconTabHome} alt="" />
-                                    Home
+                                    <span className="d-none d-lg-inline">Home</span>
                                 </a>
                             </li>
                             <li>
@@ -78,7 +80,7 @@ const Header = () => {
                                     className={activeTab === 2 ? 'active' : ''}
                                 >
                                     <img src={iconTabSocial} alt="" />
-                                    Social
+                                    <span className="d-none d-lg-inline">Social</span>
                                 </a>
                             </li>
                             <li>
@@ -88,7 +90,7 @@ const Header = () => {
                                     className={activeTab === 3 ? 'active' : ''}
                                 >
                                     <img src={iconTabMarket} alt="" />
-                                    Market
+                                    <span className="d-none d-lg-inline">Market</span>
                                 </a>
                             </li>
                             <li>
@@ -98,7 +100,7 @@ const Header = () => {
                                     className={activeTab === 4 ? 'active' : ''}
                                 >
                                     <img src={iconTabTournament} alt="" />
-                                    Tournament
+                                    <span className="d-none d-lg-inline">Tournament</span>
                                 </a>
                             </li>
                         </ul>
